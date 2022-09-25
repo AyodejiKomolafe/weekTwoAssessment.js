@@ -58,8 +58,10 @@ console.log(summedPrice)
 
 //CODE HERE
 function calcFinalPrice(cartTotal,couponValue,tax){
- return `${Math.round(cartTotal + tax) - couponValue }`
+ return `${(cartTotal + (cartTotal * tax) - couponValue).toFixed(2)}`
 }
+console.log(calcFinalPrice(summedPrice,20,1.30))
+
 
 
 //////////////////PROBLEM 3////////////////////
